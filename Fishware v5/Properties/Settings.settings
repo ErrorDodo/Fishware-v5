@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Fishware_v5.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="headercolour" Type="System.String" Scope="User">
+      <Value Profile="(Default)">#FF3971E6</Value>
+    </Setting>
+    <Setting Name="sidebarcolour" Type="System.String" Scope="User">
+      <Value Profile="(Default)">#FF2F61CB</Value>
+    </Setting>
+    <Setting Name="titlecolour" Type="System.String" Scope="User">
+      <Value Profile="(Default)">#ffffff</Value>
+    </Setting>
+    <Setting Name="subtitlecolour" Type="System.String" Scope="User">
+      <Value Profile="(Default)">#FF9BB8F5</Value>
+    </Setting>
+    <Setting Name="boxcolour" Type="System.String" Scope="User">
+      <Value Profile="(Default)">#ffffff</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
