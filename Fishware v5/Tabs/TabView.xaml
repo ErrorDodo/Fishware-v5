@@ -1,0 +1,87 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:s="clr-namespace:System.Collections;assembly=mscorlib"
+             xmlns:p="clr-namespace:System;assembly=mscorlib"
+             xmlns:local="clr-namespace:Fishware_v5.Tabs"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="Fishware_v5.Tabs.TabView"
+             mc:Ignorable="d" 
+             Height="400" Width="755">
+
+    <UserControl.Resources>
+        <Style TargetType="{x:Type GridViewColumnHeader}">
+            <Setter Property="HorizontalContentAlignment" Value="Left" />
+            <Setter Property="Foreground" Value="Black" />
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Background="#FF414B55">
+        <Grid Margin="103,10,24,11">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="42*"/>
+                <RowDefinition Height="337*"/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="searchterms" Grid.Row="0" TextChanged="searchterms_TextChanged" VerticalAlignment="Center" Height="37">
+                <TextBox.Style>
+                    <Style xmlns:sys="clr-namespace:System;assembly=mscorlib" TargetType="{x:Type TextBox}">
+                        <Style.Resources>
+                            <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
+                                <VisualBrush.Visual>
+                                    <Label Content="Enter Search Term" Foreground="LightGray" />
+                                </VisualBrush.Visual>
+                            </VisualBrush>
+                        </Style.Resources>
+                        <Style.Triggers>
+                            <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                                <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                            </Trigger>
+                            <Trigger Property="Text" Value="{x:Null}">
+                                <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter Property="Background" Value="White" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
+            <ListView x:Name="output" SelectedItem="{Binding SelectedSection, Mode=TwoWay}" Foreground="White" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Hidden" Grid.Row="1" MouseDoubleClick="output_MouseDoubleClick" BorderBrush="#89FFFFFF" >
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="ProfilePic" Width="auto" x:Name="profile">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Image Source="{Binding Pfp}" Stretch="Uniform" Width="60" Height="60" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Display name" DisplayMemberBinding="{Binding Display}" Width="auto"/>
+                        <GridViewColumn Header="Username" DisplayMemberBinding="{Binding Username}" Width="auto" />
+                        <GridViewColumn Header="Wins" DisplayMemberBinding="{Binding Wins}" Width="auto" />
+                        <GridViewColumn Header="Level" DisplayMemberBinding="{Binding Level}" Width="auto" />
+                        <GridViewColumn Header="ProfileURL" DisplayMemberBinding="{Binding ProfileURL}" Width="auto" />
+                    </GridView>
+                </ListView.View>
+                <ListView.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Account">
+                            <MenuItem Header="Login"
+                                  Click="LoginSelectedNoCSGO" />
+                            <MenuItem Header="Start CSGO"
+                                  Click="LoginSelected" />
+                        </MenuItem>
+                        <Separator/>
+                        <MenuItem Header="Copy to clipboard"
+                                  Click="CopyToClipboard" />
+                        <Separator/>
+                        <MenuItem Header="Delete Entry"
+                                  Click="DeleteEntry" />
+
+                    </ContextMenu>
+                </ListView.ContextMenu>
+            </ListView>
+        </Grid>
+    </Grid>
+</UserControl>
