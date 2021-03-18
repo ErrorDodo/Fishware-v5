@@ -82,9 +82,9 @@ namespace Fishware_v5.Tabs
                 System.Diagnostics.Process.Start(profile1);
                 Console.WriteLine(profile1);
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.Message, "Click an account first");
+
             }
 
         }
