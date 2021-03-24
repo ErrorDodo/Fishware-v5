@@ -48,6 +48,7 @@ In order to make the most of the programs account checking options you must use 
 - [ ] Create better SQL functions
 - [ ] Comment to make it easier for people to read
 - [ ] Fix the bug where accounts are logged twice
+- [ ] Allow messages to keep being displayed to logging window even when clicking on view/home tabs
 - [x] Pretend its not version 5 
 
 
