@@ -41,7 +41,7 @@ In order to make the most of the programs account checking options you must use 
   - Go to line 270 where ```csharp string api_key``` is referenced 
   - Get API key from said link and paste it
   - Start Checking
-  - pssst. I have left my steam api key in it (You're welcome, no abuse please)
+  - pssst. I have left my steam api key in it (It won't work due to being revoked though :P)
 
 
 #To Do
