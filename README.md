@@ -1,2 +1,55 @@
 # Fishware-csgo
 An Account Checker/Viewer for VALVE'S CSGO 
+
+# Ever wanted a program that checks CSGO accounts?
+### Neither but here it is.
+
+Sick and tired of having to manually sign into your non prime accounts you buy in order to play sweaty against the low ranks, well is this is program for you. Just input a text file that looks something like this (They are working accounts dont tell anyone (I think));
+```
+j121_5XwFTB:zbECi4dB
+j121_TRJRo1:Jl9sqFHf
+j121_BE7xZm:hA6vkEKb
+j121_RzFN9l:b5TfQaqv
+```
+During the checking the program will give you real time logging like this;
+![Logging](https://sexycatgirls.com/img/checking.png)
+
+After the masterful and totally not broken logging has been shown navigate to the view accounts tab;
+![TabSwitching](https://sexycatgirls.com/img/navi.png)
+
+Where you will see nicely formatted information about each account (that it can log into)
+The general idea of the formatting was this;
+Profile Pic | Display Name | Username | Wins | Level | Profile link
+------------|--------------|----------|------|-------|-------------
+
+![Format](https://sexycatgirls.com/img/info.png)
+
+The program has extra options when an account is right clicked on (Make sure you left click it first)
+- Double left click will take you to the accounts steam profile link
+
+![Extra](https://sexycatgirls.com/img/extra.png)
+
+Program also allows for customisation of almost every colour element (If you ever felt like making this amazing software look hideous);
+![Cust](https://sexycatgirls.com/img/cust.gif)
+
+And uhhh, the colours do stick, so make sure you like the colours otherwise its back the square one with the reset colour.
+
+# How to use
+In order to make the most of the programs account checking options you must use a steam API key from here (https://steamcommunity.com/dev/apikey)
+- How to change the API
+  - Navigate to BanCheck.cs in Fishwarev5/DataEntry
+  - Go to line 270 where ```csharp string api_key``` is referenced 
+  - Get API key from said link and paste it
+  - Start Checking
+  - pssst. I have left my steam api key in it (You're welcome, no abuse please)
+
+
+#To Do
+- [ ] Create better SQL functions
+- [ ] Comment to make it easier for people to read
+- [ ] Fix the bug where accounts are logged twice
+- [x] Pretend its not version 5 
+
+
+# Required
+https://dotnet.microsoft.com/download/dotnet-framework/net472
