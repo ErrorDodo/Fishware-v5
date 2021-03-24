@@ -267,7 +267,7 @@ namespace Fishware_v5.DataEntry
 
         private (string profile_link, string profile_pic, string public_name) extraData(ulong steam64)
         {
-            string api_key = "DC9339C9AB470CAAFED8023AC3A8ED21";
+            string api_key = "NOOOOOOOOOOOOOOOOOOO";
             string api_url = new WebClient().DownloadString($"https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key={api_key}&steamids={steam64}");
 
             dynamic jsonobject = JsonConvert.DeserializeObject<dynamic>(api_url);

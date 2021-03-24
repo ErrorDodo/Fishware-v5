@@ -41,11 +41,7 @@ namespace Fishware_v5.DataEntry
             Directory.CreateDirectory(specificFolder);
 
 
-            if (File.Exists($"{specificFolder}\\csgoaccounts.mdf"))
-            {
-                return;
-            }
-            else
+            if (!File.Exists($"{specificFolder}\\csgoaccounts.mdf"))
             {
                 Extract("Fishware_v5", specificFolder, "DataEntry", "csgoaccounts.mdf");
             }
